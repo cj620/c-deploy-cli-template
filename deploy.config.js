@@ -23,5 +23,15 @@ module.exports = {
     distPath: 'dist',  // 本地打包dist目录
     webDir: '' // 线上环境web目录
   }
+  github: {
+        // 传输方式 默认不填为'ssh'
+        method: "git",
+        // 线上环境
+        name: "github Pages",
+        script: "npm run build", // 线上环境打包脚本
+        distPath: "dist", // 本地打包dist目录,
+        gitSSH: "git@github.com:cj620/c-deploy-cli-template.git", //git SSH
+        branch: "gh-pages" //推送到开启pages的分支
+    }
   // 再还有多余的环境按照这个格式写即可
 }
